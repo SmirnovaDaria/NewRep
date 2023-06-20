@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrganizationEvent"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="450" MinWidth="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Button x:Name="EvBtn" Content="Мероприятия" Width="100" Height="30" Margin="20,0,0,0" Click="EvBtn_Click"/>
+            <Button x:Name="ParBtn" Content="Участник" Width="100" Height="30" Margin="20,0,0,0" Click="ParBtn_Click"/>
+            <Button x:Name="JurBtn" Content="Жюри" Width="100" Height="30" Margin="20,0,0,0" Click="JurBtn_Click"/>
+            <Button x:Name="OrgBtn" Content="Организатор" Width="100" Height="30" Margin="20,0,0,0" Click="OrgBtn_Click"/>
+            <Button x:Name="ModBtn" Content="Модератор" Width="100" Height="30" Margin="20,0,0,0" Click="ModBtn_Click"/>
+            <Button x:Name="EnterBtn" Content="Вход" Width="100" Height="30" HorizontalAlignment="Right" Margin="0,0,20,0" Click="EnterButton"/>
+        </DockPanel>
+        <Frame Grid.Row="1" x:Name="MainFrame"/>
     </Grid>
 </Window>
